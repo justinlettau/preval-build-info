@@ -70,5 +70,5 @@ if (!argv.placeholders && !process.env.PREVAL_BUILD_INFO_PLACEHOLDERS) {
     .replace('{GIT_BRANCH}', GIT_BRANCH);
 }
 
-const file = path.join('./index.js');
+const file = path.join(__dirname, '../index.js');
 fs.writeFileSync(file, content, { encoding: 'utf-8' });
