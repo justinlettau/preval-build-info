@@ -1,6 +1,6 @@
 {
   "name": "preval-build-info",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Pre-evaluate git info, version number, timestamp, etc at build time",
   "keywords": [
     "eval",
