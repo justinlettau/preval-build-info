@@ -42,7 +42,7 @@ exports.gitTag = '{GIT_TAG}';
 exports.gitBranch = '{GIT_BRANCH}';
 `;
 
-if (!argv.placeholders) {
+if (!argv.placeholders && !process.env.PREVAL_BUILD_INFO_PLACEHOLDERS) {
   const pkg = require(root + '/package.json');
   const version = pkg ? pkg.version : null;
 

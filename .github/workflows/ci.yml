@@ -5,6 +5,8 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      PREVAL_BUILD_INFO_PLACEHOLDERS: true
     steps:
       - name: Checkout
         uses: actions/checkout@v2
