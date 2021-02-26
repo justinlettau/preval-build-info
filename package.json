@@ -1,0 +1,67 @@
+{
+  "name": "preval-build-info",
+  "version": "1.0.0",
+  "description": "Pre-evaluate git info, version number, timestamp, etc at build time",
+  "keywords": [
+    "eval",
+    "preval",
+    "precompile",
+    "git",
+    "hash",
+    "version",
+    "build-info",
+    "build-tool"
+  ],
+  "author": {
+    "name": "Justin Lettau",
+    "email": "me@justinlettau.com",
+    "url": "https://justinlettau.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/justinlettau/preval-build-info",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justinlettau/preval-build-info"
+  },
+  "bugs": {
+    "url": "https://github.com/justinlettau/preval-build-info/issues"
+  },
+  "main": "index.js",
+  "types": "index.d.js",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "scripts"
+  ],
+  "bin": {
+    "preval-build-info-cli": "bin/preval-build-info-cli"
+  },
+  "scripts": {
+    "lint": "eslint . --ext .js",
+    "test": "jest",
+    "postinstall": "node ./scripts/build.js",
+    "build": "node ./scripts/build.js --placeholders",
+    "prepublishOnly": "npm run build",
+    "release": "standard-version",
+    "format": "prettier --write ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "minimist": "^1.2.5"
+  },
+  "devDependencies": {
+    "@justinlettau/renovate-config": "^0.1.2",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^8.1.0",
+    "husky": "^5.1.1",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0",
+    "standard-version": "^9.1.1"
+  }
+}
