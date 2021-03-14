@@ -43,31 +43,59 @@ exports.gitBranch = '{GIT_BRANCH}';
 `;
 
 if (!argv.placeholders && !process.env.PREVAL_BUILD_INFO_PLACEHOLDERS) {
-  const pkg = require(root + '/package.json');
-  const version = pkg ? pkg.version : null;
-
-  const VERSION = version || '0.0.0';
   const TIMESTAMP = Date.now();
-  const DATE_TIME = new Date().toISOString();
-  const GIT_HASH = execSync('git rev-parse HEAD').toString().trim();
-  const GIT_HASH_SHORT = execSync('git rev-parse --short HEAD')
-    .toString()
-    .trim();
-  const GIT_TAG = execSync('git describe --always --tag --abbrev=0')
-    .toString()
-    .trim();
-  const GIT_BRANCH = execSync('git rev-parse --abbrev-ref HEAD')
-    .toString()
-    .trim();
+  content = content.replace('{TIMESTAMP}', TIMESTAMP);
 
-  content = content
-    .replace('{VERSION}', VERSION)
-    .replace('{TIMESTAMP}', TIMESTAMP)
-    .replace('{DATE_TIME}', DATE_TIME)
-    .replace('{GIT_HASH}', GIT_HASH)
-    .replace('{GIT_HASH_SHORT}', GIT_HASH_SHORT)
-    .replace('{GIT_TAG}', GIT_TAG)
-    .replace('{GIT_BRANCH}', GIT_BRANCH);
+  const DATE_TIME = new Date().toISOString();
+  content = content.replace('{DATE_TIME}', DATE_TIME);
+
+  try {
+    const pkg = require(root + '/package.json');
+    const version = pkg ? pkg.version : null;
+
+    const VERSION = version || '0.0.0';
+    content = content.replace('{VERSION}', VERSION);
+  } catch (error) {
+    console.log(error);
+  }
+
+  try {
+    const GIT_HASH = execSync('git rev-parse HEAD').toString().trim();
+
+    content = content.replace('{GIT_HASH}', GIT_HASH);
+  } catch (error) {
+    console.log(error);
+  }
+
+  try {
+    const GIT_HASH_SHORT = execSync('git rev-parse --short HEAD')
+      .toString()
+      .trim();
+
+    content = content.replace('{GIT_HASH_SHORT}', GIT_HASH_SHORT);
+  } catch (error) {
+    console.log(error);
+  }
+
+  try {
+    const GIT_TAG = execSync('git describe --always --tag --abbrev=0')
+      .toString()
+      .trim();
+
+    content = content.replace('{GIT_TAG}', GIT_TAG);
+  } catch (error) {
+    console.log(error);
+  }
+
+  try {
+    const GIT_BRANCH = execSync('git rev-parse --abbrev-ref HEAD')
+      .toString()
+      .trim();
+
+    content = content.replace('{GIT_BRANCH}', GIT_BRANCH);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 const file = path.join(__dirname, '../index.js');
