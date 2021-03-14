@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/justinlettau/preval-build-info/compare/v1.0.2...v1.0.3) (2021-03-14)
+
+
+### Bug Fixes
+
+* add try/catch around child processes ([a35d7d3](https://github.com/justinlettau/preval-build-info/commit/a35d7d36dafa0b494be9693eafcbbc7c6dbb5115))
+
 ### [1.0.2](https://github.com/justinlettau/preval-build-info/compare/v1.0.1...v1.0.2) (2021-02-26)
 
 
