@@ -3,34 +3,34 @@
 /**
  * Package version.
  */
-exports.version = '{VERSION}';
+exports.version = '1.0.3';
 
 /**
  * Timestamp.
  */
-exports.timestamp = '{TIMESTAMP}';
+exports.timestamp = '1628046356602';
 
 /**
  * ISO date and time.
  */
-exports.dateTime = '{DATE_TIME}';
+exports.dateTime = '2021-08-04T03:05:56.602Z';
 
 /**
  * Git hash.
  */
-exports.gitHash = '{GIT_HASH}';
+exports.gitHash = 'd4a0764831125bfe1f9ca522a3193850299e4c4a';
 
 /**
  * Git short hash.
  */
-exports.gitHashShort = '{GIT_HASH_SHORT}';
+exports.gitHashShort = 'd4a0764';
 
 /**
  * Git tag name.
  */
-exports.gitTag = '{GIT_TAG}';
+exports.gitTag = 'v1.0.3';
 
 /**
  * Git branch name.
  */
-exports.gitBranch = '{GIT_BRANCH}';
+exports.gitBranch = 'master';
