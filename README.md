@@ -1,8 +1,6 @@
 [![NPM Version](https://badge.fury.io/js/preval-build-info.svg)](https://badge.fury.io/js/preval-build-info)
 [![CI](https://github.com/justinlettau/preval-build-info/workflows/CI/badge.svg)](https://github.com/justinlettau/preval-build-info/actions)
 [![codecov](https://codecov.io/gh/justinlettau/preval-build-info/branch/master/graph/badge.svg)](https://codecov.io/gh/justinlettau/preval-build-info)
-[![Dependency Status](https://david-dm.org/justinlettau/preval-build-info.svg)](https://david-dm.org/justinlettau/preval-build-info)
-[![Dev Dependency Status](https://david-dm.org/justinlettau/preval-build-info/dev-status.svg)](https://david-dm.org/justinlettau/preval-build-info?type=dev)
 
 # Preval Build Info
 
