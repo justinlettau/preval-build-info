@@ -59,6 +59,6 @@
     "husky": "^7.0.4",
     "jest": "^27.3.1",
     "prettier": "^2.4.1",
-    "pretty-quick": "^3.1.1"
+    "pretty-quick": "^4.0.0"
   }
 }
